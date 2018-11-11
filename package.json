@@ -1,0 +1,21 @@
+{
+  "name": "emby",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "npm start",
+    "build": "cross-env ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true electron-builder build"
+  },
+  "author": "Exybore",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "electron": "^3.0.8",
+    "electron-builder": "^20.34.0"
+  },
+  "dependencies": {
+    "discord-rpc": "^3.0.1"
+  }
+}
