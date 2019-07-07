@@ -5,6 +5,7 @@
 </div>
 
 - [🎵 How it works](#-how-it-works)
+- [📌 Known problems](#-how-it-works)
 - [📥 Setup](#-setup)
 - [💻 Development](#-development)
 - [🔨 Build](#-build)
@@ -16,7 +17,7 @@ The Electron application connects to your Discord client via RPC. Then, when you
 
 ## 📌 Known problems
 
-- When on the fullscreen player page, the application think you're switching music
+- When on the fullscreen player page, the application thinks you're switching music
 - If you go on an other website than an Emby instance, the application will not work
 
 ## 📥 Setup
@@ -33,7 +34,7 @@ Then, create a `config.json` file based on the `config.sample.json` file, and re
 
 ## 💻 Development
 
-To run the app as development, use one of these commands :
+To run the application for development, use one of these commands :
 
 ```bash
 npm start  # if you use NPM
