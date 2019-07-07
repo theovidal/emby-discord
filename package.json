@@ -1,15 +1,34 @@
 {
-  "name": "emby",
+  "name": "emby-discord",
+  "description": "🎵 Display music you're listening with Emby on Discord using Rich Presence",
+  "keywords": [
+    "emby",
+    "discord",
+    "discord-rpc",
+    "rich-presence",
+    "electron"
+  ],
+  "author": "Exybore",
+  "homepage": "https://github.com/exybore/emby-discord",
+  "contributors": [
+    {
+      "name": "exybore",
+      "email": "exybore@becauseofprog.fr",
+      "url": "https://exybore.becauseofprog.fr"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exybore/emby-discord"
+  },
+  "license": "MIT",
   "version": "1.0.0",
-  "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "dev": "npm start",
     "build": "cross-env ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true electron-builder build"
   },
-  "author": "Exybore",
-  "license": "MIT",
   "devDependencies": {
     "cross-env": "^5.2.0",
     "electron": "^3.0.8",
