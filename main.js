@@ -16,6 +16,7 @@ function createWindow() {
     center: true,
     titleBarStyle: 'hidden',
     frame: true,
+    icon: './assets/emby.png',
     alwaysOnTop: false,
     title: 'Emby',
     webPreferences: {
