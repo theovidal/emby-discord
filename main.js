@@ -1,7 +1,11 @@
 'use strict'
 const { app, BrowserWindow } = require('electron')
 const RPC = require('discord-rpc')
+const fs = require('fs')
+const path = require('path')
 
+const configPath = path.join(__dirname, 'config.json')
+let config
 let mainWindow
 
 function createWindow() {
@@ -16,12 +20,18 @@ function createWindow() {
     title: 'Emby',
     webPreferences: {
       nodeIntegration: false,
-      plugins: true,
+      plugins: true
     }
   })
 
-  mainWindow.loadURL('https://emby.becauseofprog.fr'
-  )
+  fs.readFile(configPath, { encoding: 'utf-8' }, function(err, data) {
+    if (err) {
+      return new Error('Error while loading configuration file : ' + err)
+    } else {
+      config = JSON.parse(data)
+      mainWindow.loadURL(config.url)
+    }
+  })
 
   mainWindow.on('closed', () => {
     mainWindow = null
@@ -103,7 +113,7 @@ rpc.on('ready', () => {
   // activity can only be set every 15 seconds
   setInterval(() => {
     setActivity()
-  }, 5E2)
+  }, 5e2)
 })
 
 rpc.login({ clientId }).catch(console.error)
